@@ -1,0 +1,253 @@
+@import "./utilities";
+@import "./responsive";
+
+// header
+header{
+    height: 13vh;
+    border-bottom: 1px solid $VERY-DARK-BLUE;
+    @include flexCenterRow;
+    justify-content: space-between;
+    padding: 0px 15px;
+    @include mq(830px) {
+        justify-content: left;
+        padding: 0 2px;
+    }
+
+    .hamburger{
+        width: 20px;
+        object-fit: contain;
+        margin: 0 30px;
+        cursor: pointer;
+        transition: all .3s ease;
+        display: none;
+        @include mq(830px){
+            display: block;
+        }
+        &:hover{
+            color: $Light-grayish-blue;
+        }
+    }
+
+    img{
+        width: 120px;
+        flex: 1;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex: 1;
+        margin: 0 0 0 50px;
+        z-index: 500;
+        @include mq(830px){
+            display: none;
+        }
+
+        &.active{
+            @include mq(830px){
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -60px;
+            right: 0;
+            bottom: 0;
+            background: rgba($color: #313131, $alpha: 0.5);
+            transition: all .3s ease-in-out;
+        }
+    }
+    &.none{
+        display: none;
+    }
+
+      
+        .close{
+            width: 20px;
+            object-fit: contain;
+            margin: 0 30px;
+            cursor: pointer;
+            transition: all .3s ease;
+            display: none;
+            &.active{
+                @include mq(830px){
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    cursor: pointer;
+                    left: 5px;
+                }
+            }
+           
+        }
+
+        ul{
+            display: flex;
+            gap: 14px;
+            @include mq(830px){
+                display: none;
+            }
+
+            &.active{
+            @include mq(830px){
+                display: flex;
+                    justify-content: left;
+                    gap: 30px;
+                    flex-direction: column;
+                    background: $White;
+                    height: 100vh;
+                    width: 60vw;
+                    padding: 70px 30px 0px;
+                }
+            }
+          
+            
+            li{
+                &:hover{
+                    a{  
+                        border-bottom: 3px solid $Orange;
+                        padding-bottom: 23px;
+                        @include mq(830px) {
+                            border: none;
+                        }
+                    }
+                }
+                a{
+                    color: $DARK-GRAYISH-BLUE;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    @include mq(830px){
+                       color: $Black;
+                       font-weight: bolder;
+                    }
+        
+                    &:hover{
+                        color: $VERY-DARK-BLUE;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile{
+        display: flex;
+        gap: 20px;
+        padding-right: 10px;
+        position: relative;
+
+            .count::before{
+                content: attr(data-count);
+                font-size: 1rem;
+                position: absolute;
+                right: 70px;
+                top: -11px;
+                background: $Orange;
+                color: $White;
+                width: 20px;
+                text-align: center;
+                border-radius: 10px;
+            }
+        
+
+        @include mq(830px) {
+            margin-left: auto;
+        }
+        img{
+            width: 35px;
+            object-fit: contain;
+            cursor: pointer;
+            position: relative;
+            
+            &:first-child{
+                width: 30px;
+                transition: all .3s ease;
+             
+                &:hover{
+                    filter: brightness(10%);
+                }
+            }
+            &:last-child{
+                border-radius: 100%;
+                border: 2px solid white;
+                width: 40px;
+                transition: all .3s ease;
+
+               &:hover{
+                  border: 2px solid $Orange;
+               }
+            }
+        }
+      
+
+    }  
+    
+    .cart__container{
+        position: absolute;
+        top: 100px;
+        right: 40px;
+        max-width: 300px;
+        width: 280px;
+        box-shadow: 0px 2px 15px $DARK-GRAYISH-BLUE;
+        padding: 10px 0px;
+        background: $White;
+        @include mq(430px){
+         top: calc(100vh - 86vh);
+         right: 50%;
+         transform: translate(47%, 8%);
+
+        }
+
+        .none{
+            display: none;
+        }
+        
+        .cart__header{
+            font-size: 1.1rem;
+            border-bottom: 1px solid $VERY-DARK-BLUE ;
+            padding: 5px 7px;
+            font-weight: 700;
+           
+        }
+
+        .cart__body{
+            padding: 10px 7px;            
+            min-height: 15vh;
+            display: grid;
+            place-content: center;
+
+            h2{
+                font-size: 1.1rem;
+            }
+
+            .cart__products{
+                display: flex;
+
+                img{
+                    width: 50px;
+                }
+
+                .cart__product__info{
+                    margin: 0 10px;
+                    
+                    h2{
+                        font-size: .9rem;
+                        font-weight: 500;
+                        color: $VERY-DARK-BLUE;
+                    }
+                    p{
+                        font-size: .9rem;
+                        color: $VERY-DARK-BLUE;
+                    }
+                }
+                .icons{
+                   width: 20px;
+                   object-fit: contain;
+                   cursor: pointer;
+                }
+            }
+
+        }
+        .cart__footer{
+            margin: 20px 0px 5px ;
+        }
+    }
+}

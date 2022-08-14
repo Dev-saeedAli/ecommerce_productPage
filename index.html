@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Mohammed Said Ali">
+  <meta name="description" content="front end mentor e-commerce product page">
+  <meta name="keyword" content="html, css, sass, javascript">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="sass/style.css">
+  <!-- script  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script defer src="./js/app.js"></script>
+  <!-- end of script  -->
+</head>
+<body>
+  <!-- header  -->
+  <div class="container">
+  <header>
+    <figure>
+      <img class="hamburger" src="./images/icon-menu.svg" alt="menu icon image">
+    </figure>
+    <figure>
+      <img src="./images/logo.svg" alt="logo image">
+      <figcaption>Logo Image</figcaption>
+    </figure>
+    <nav id="nav">
+      <figure>
+        <img class="close" src="./images/icon-close.svg" alt="close icon image">
+        <figcaption>Logo Image</figcaption>
+      </figure>
+      <ul >
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <span class="count" data-count="0"></span>
+      <img src="./images/icon-cart.svg" alt="cart icon" class="cartIcon">
+      <img src="./images/image-avatar.png" alt="user image">
+    </div>
+    <div class="cart__container none">
+      <div class="cart__header">Cart</div>
+      <div class="cart__body">
+        <h2>Your cart is empty</h2>
+        <!-- <div class="cart__products">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="image of product added to cart">
+          <div class="cart__product__info">
+            <h2>Autumn Limited Edition..</h2>
+            <p>$125.00 x 3 <strong>$375.00</strong></p>
+          </div>
+          <img class="icons" src="./images/icon-delete.svg" alt="delete icon image">
+        </div>
+      </div>
+      <div class="cart__footer">
+        <button class="checkout btn">
+          Checkout
+        </button>
+       </div> -->
+    </div>
+    </div>
+  </header>
+  <!-- end of header  -->
+
+  <!-- main -->
+  <main>
+    <!-- section__left -->
+    <section class="section__left">
+      <h2 class="offset">Product image section</h2>
+      <div class="display__image">
+        <img src="./images/image-product-1.jpg" alt="display product image">
+      </div>
+      <div class="small__display__image">
+        <img class="active" src="./images/image-product-1-thumbnail.jpg" alt="change display images">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="change display images">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="change display images">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="change display images">
+      </div>
+
+      <div class="preview none">
+        <img class="icon-close" src="./images/icon-close.svg" alt="close icon image">
+        <div class="display__image">
+          <img src="./images/image-product-1.jpg" alt="display product image">
+        </div>
+        <div class="small__display__image">
+          <img class="active" src="./images/image-product-1-thumbnail.jpg" alt="change display images">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="change display images">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="change display images">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="change display images">
+        </div>
+      </div>
+    </section>
+    <!-- end of section__left -->
+    <!-- section right -->
+    <section class="section__right">
+      <!-- product details -->
+      <div class="product__details">
+        <h2 title="company name">Sneaker Company</h2>
+        <h3 title="edition title">Fall Limited Edition <br>Sneakers</h3>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <strong class="price">$125.00 <span class="price__discount">50%</span></strong>
+          <br>
+          <span class="old__price">$250.00</span>  
+        </div>
+        <!-- end of product details -->
+        <!-- product updates -->
+        <div class="product__details__update">
+          <div class="update__product-count">
+            <button class="btn__minus"><img src="./images/icon-minus.svg" alt="decrease product count image"></button>
+            <span class="current__count">1</span>
+            <button class="btn__plus"><img src="./images/icon-plus.svg" alt="increase product count image "></button>
+          </div>
+          <div class="addToCart">
+            <button class="add__to__cart">
+              <img src="./images/icon-cart.svg" alt="cart icon image">
+              <span class="add__to__cart__text">Add to cart</span>
+            </button>
+          </div>
+        </div>
+        <!-- end of product updates -->
+    </section>
+    <!-- end of section right -->
+  </main>
+  <!-- end of main -->
+</div>
+
+</body>
+</html>

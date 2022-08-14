@@ -1,0 +1,73 @@
+@import "./colors";
+@import "./utilities";
+@import "./header";
+@import "./main";
+
+// resets
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// basics
+body,
+html{
+    scroll-behavior: smooth;
+    font-family: $FONT-FF;
+    overflow: hidden;
+    @include mq(800px){
+        overflow-y: auto;
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+img{
+    width: 40px;
+}
+figcaption{
+    position: absolute;
+    left: -10000px;
+}
+.btn{
+    background: $Orange;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: $White;
+    width: 100%;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+button, 
+input{
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+.container{
+    background: $White;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.offset{
+  position: absolute;
+  left: -10000px;
+}
+.none{
+    display : none;
+}
+// end of header
+
